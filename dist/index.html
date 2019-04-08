@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><head><link rel="preload" href="/css/1_021da.css" as="style"><link rel="preload" href="/css/main_47d43.css" as="style"><link rel="preload" href="/js/vendors~main_021da.js" as="script"><link rel="preload" href="/js/main_47d43.js" as="script"><meta charset="utf-8"><title>免单易</title><meta name="apple-mobile-web-app-title" content="免单易"><meta name="application-name" content="免单易"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#673ab8"><meta name="msapplication-TileColor" content="#673ab8"><meta name="msapplication-TileImage" content="./assets/icons/mstile-150x150.png"><link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png"><link rel="icon" type="image/png" href="/assets/icons/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="/assets/icons/favicon-16x16.png" sizes="16x16"><link rel="manifest" href="./manifest.json"><script>try {
+					!function (a, b) {
+							function c() {
+									var b = f.getBoundingClientRect().width;
+									b / i > 540 && (b = 540 * i);
+									var c = b / 10;
+									f.style.fontSize = c + "px", k.rem = a.rem = c
+							}
+
+							var d, e = a.document, f = e.documentElement, g = e.querySelector('meta[name="viewport"]'),
+									h = e.querySelector('meta[name="flexible"]'), i = 0, j = 0, k = b.flexible || (b.flexible = {});
+							if (g) {
+									console.warn("将根据已有的meta标签来设置缩放比例");
+									var l = g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
+									l && (j = parseFloat(l[1]), i = parseInt(1 / j))
+							} else if (h) {
+									var m = h.getAttribute("content");
+									if (m) {
+											var n = m.match(/initial\-dpr=([\d\.]+)/), o = m.match(/maximum\-dpr=([\d\.]+)/);
+											n && (i = parseFloat(n[1]), j = parseFloat((1 / i).toFixed(2))), o && (i = parseFloat(o[1]), j = parseFloat((1 / i).toFixed(2)))
+									}
+							}
+							if (!i && !j) {
+									var p = (a.navigator.appVersion.match(/android/gi), a.navigator.appVersion.match(/iphone/gi)),
+											q = a.devicePixelRatio;
+									i = p ? q >= 3 && (!i || i >= 3) ? 3 : q >= 2 && (!i || i >= 2) ? 2 : 1 : 1, j = 1 / i
+							}
+							if (f.setAttribute("data-dpr", i), !g) if (g = e.createElement("meta"), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + j + ", maximum-scale=" + j + ", minimum-scale=" + j + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g); else {
+									var r = e.createElement("div");
+									r.appendChild(g), e.write(r.innerHTML)
+							}
+							a.addEventListener("resize", function () {
+									clearTimeout(d), d = setTimeout(c, 300)
+							}, !1), a.addEventListener("pageshow", function (a) {
+									a.persisted && (clearTimeout(d), d = setTimeout(c, 300))
+							}, !1), "complete" === e.readyState ? e.body.style.fontSize = 12 * i + "px" : e.addEventListener("DOMContentLoaded", function () {
+									e.body.style.fontSize = 12 * i + "px"
+							}, !1), c(), k.dpr = a.dpr = i, k.refreshRem = c, k.rem2px = function (a) {
+									var b = parseFloat(a) * this.rem;
+									return "string" == typeof a && a.match(/rem$/) && (b += "px"), b
+							}, k.px2rem = function (a) {
+									var b = parseFloat(a) / this.rem;
+									return "string" == typeof a && a.match(/px$/) && (b += "rem"), b
+							}
+					}(window, window.lib || (window.lib = {}));
+			}catch (e){
+
+			}</script><link href="/css/1_021da.css" rel="stylesheet"><link href="/css/main_47d43.css" rel="stylesheet"></head><body><script type="text/javascript" src="/js/vendors~main_021da.js"></script><script type="text/javascript" src="/js/main_47d43.js"></script></body></html>
